@@ -13,11 +13,12 @@
 		}
 		body {
 			margin: 0;
-			background-color: #ab88ff;
+			background-color: #8f57fd;
 			font-family: 'Muli', sans-serif;
+			color: #fff;
 		}
 		.header {
-			background: #ab88ff;
+			background: #8f57fd;
 			width: 100%;
 			height: 80px;
 			display: flex;
@@ -30,7 +31,6 @@
 		}
 		.header__menu {
 			margin-right: 30px;
-			color: #fff;
 		}
 		.header__menu--profile {
 			margin-right: 8px;
@@ -59,10 +59,34 @@
 		}
 		.header__menu ul li a {
 			text-decoration: none;
-			color: #fff;
 		}
 		.header__menu ul li:hover a {
 			text-decoration: underline;
+		}
+		.main {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.main__title {
+			font-size: 2em;
+		}
+		.input {
+			border: 2px solid #fff;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 30px;
+			color: #fff;
+			font-size: 20px;
+			height: 50px;
+			width: 70%;
+			outline: none;
+			padding: 0 20px;
+			text-align: center;
+		}
+		.input::placeholder {
+			color: #fff;
+			text-align: center;
 		}
 	</style>
 	<body>
@@ -83,5 +107,15 @@
 				</ul>
 			</div>
 		</header>
+		<main class="main">
+			<h2 class="main__title" for="search">¿Qué quieres ver hoy?</h2>
+			<input
+				class="input"
+				type="text"
+				name="search"
+				id="search"
+				placeholder="Buscar..."
+			/>
+		</main>
 	</body>
 </html>
