@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<style>
+		* {
+			/* padding: 0; */
+			/* box-sizing: border-box; */
+			color: #fff;
+		}
+		body {
+			margin: 0;
+			font-family: 'Muli', sans-serif;
+		}
+		.header {
+			background: #21c08b;
+			width: 100%;
+			height: 80px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header__img {
+			width: 200px;
+			margin-left: 30px;
+		}
+		.header__menu {
+			margin-right: 30px;
+		}
+		.header__menu--profile {
+			margin-right: 8px;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+		.header__menu--profile img {
+			margin-right: 8px;
+			width: 40px;
+		}
+		.header__menu ul {
+			display: none;
+			list-style: none;
+			position: absolute;
+			text-align: right;
+			width: 100px;
+			margin: 0 0 0 -14px;
+		}
+		.header__menu:hover ul,
+		ul:hover {
+			display: block;
+		}
+		.header__menu ul li {
+			margin: 10px 0;
+		}
+		.header__menu ul li a {
+			text-decoration: none;
+		}
+		.header__menu ul li:hover a {
+			text-decoration: underline;
+		}
+		.login {
+			background: linear-gradient(#21c08b, #8f57fd);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 0 30px;
+			min-height: calc(100vh - 200px);
+		}
+		.login__container {
+			background-color: rgba(255, 255, 255, 0.2);
+			border: 2px solid #fff;
+			border-radius: 45px;
+			padding: 60px 68px 40px;
+			min-height: 700px;
+			width: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			box-shadow: 0px 4px 7px 5px rgba(0, 0, 0, 0.2);
+		}
+		.login__container--form {
+			display: inherit;
+			flex-direction: inherit;
+		}
+		.login__container--form label {
+			font-size: 14px;
+		}
+		.login__container--remember-me {
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: 25px;
+			/* flex-direction: inherit; */
+			align-items: center;
+		}
+		.login__container--remember-me a {
+			text-decoration: none;
+		}
+		.login__container--remember-me a:hover {
+			text-decoration: underline;
+		}
+		.login__container--social-media > figure {
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+		.login__container--social-media > figure > img {
+			width: 30px;
+			margin-right: 10px;
+		}
+		.login__container--register {
+			font-size: 14px;
+			display: inherit;
+			flex-direction: inherit;
+			align-items: center;
+		}
+		.login__container--register a {
+			font-size: 16px;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		.login__container--register a:hover {
+			text-decoration: underline;
+		}
+		.input {
+			background-color: transparent;
+			border: 0;
+			border-bottom: 2px solid #fff;
+			outline: none;
+			margin: 10px 0;
+			font-size: 16px;
+			font-family: 'Muli', sans-serif;
+			margin-bottom: 20px;
+			padding: 0 20px;
+		}
+		::placeholder {
+			color: #fff;
+			padding-left: 2px;
+		}
+		.button {
+			background-color: rgba(255, 255, 255, 0.2);
+			border: 0;
+			border-radius: 25px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: 'Muli', sans-serif;
+			height: 50px;
+			margin-top: 10px;
+			transition: 450ms background-color, 450ms border;
+		}
+		.button:hover {
+			border: 1px solid #fff;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		.footer {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			width: 100%;
+			background-color: #8f57fd;
+		}
+		.footer a {
+			cursor: pointer;
+			font-size: 14px;
+			padding-left: 30px;
+			text-decoration: none;
+		}
+		.footer a:hover {
+			text-decoration: underline;
+		}
+	</style>
+	<body>
+		<header class="header">
+			<img
+				src="./assets/logo-platzi-video-BW2.png"
+				alt=""
+				class="header__img"
+			/>
+			<div class="header__menu">
+				<div class="header__menu--profile">
+					<img src="./assets/user-icon.png" alt="" />
+					<p>Perfil</p>
+				</div>
+				<ul>
+					<li><a href="">Cuenta</a></li>
+					<li><a href="">Cerrar sesión</a></li>
+				</ul>
+			</div>
+		</header>
+		<section class="login">
+			<div class="login__container">
+				<h2>Inicia sesión</h2>
+				<form class="login__container--form" action="">
+					<input class="input" type="text" placeholder="Correo" />
+					<input class="input" type="password" placeholder="Contraseña" />
+					<button class="button">Iniciar sesión</button>
+					<div class="login__container--remember-me">
+						<label>
+							<input type="checkbox" name="chackbox" id="chackbox" />Recuérdame
+						</label>
+						<a href="/">Olvidé mi Contraseña</a>
+					</div>
+				</form>
+				<section class="login__container--social-media">
+					<figure>
+						<img src="./assets/google-icon.png" alt="Google" />Inicia sesión con
+						Google
+					</figure>
+					<figure>
+						<img src="./assets/twitter-icon.png" alt="Twitter" />Inicia sesión
+						con Twitter
+					</figure>
+				</section>
+				<p class="login__container--register">
+					No tienes ninguna cuenta <a href="/">Regístrate</a>
+				</p>
+			</div>
+		</section>
+		<footer class="footer">
+			<a href="">Términos de uso</a>
+			<a href="">Declaración de Privacidad</a>
+			<a href="">Centro de Ayuda</a>
+		</footer>
+	</body>
+</html>
